@@ -27,11 +27,11 @@ import Login.LoginPage;
 			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
 			driver.manage().timeouts().scriptTimeout(Duration.ofMinutes(2)); 
 			driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-			driver.navigate().to("https://www.talan-academy.com/");
+			driver.navigate().to("https://www.talan-academy.com/#login");
 			System.out.print(driver.getCurrentUrl());
 			driver.manage().window().maximize();
 			login = new LoginPage(driver) ;
-			login.AccessLogin();
+			//login.AccessLogin();
 		}
 		@When("I add my mail and password")
 		public void i_add_my_mail() {
